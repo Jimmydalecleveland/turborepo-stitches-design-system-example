@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Card } from "@Jimmydalecleveland/ui";
+import { Card } from "@jimmydalecleveland/stitches-ui-example";
 import styles from "./page.module.css";
 
 function Gradient({
