@@ -15,18 +15,31 @@
     "build": "rollup --config",
     "dev": "rollup --config -w",
     "lint": "eslint .",
-    "generate:component": "turbo gen react-component"
+    "generate:component": "turbo gen react-component",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "devDependencies": {
     "@rollup/plugin-typescript": "^11.1.5",
+    "@storybook/addon-essentials": "^7.5.2",
+    "@storybook/addon-interactions": "^7.5.2",
+    "@storybook/addon-links": "^7.5.2",
+    "@storybook/addon-onboarding": "^1.0.8",
+    "@storybook/blocks": "^7.5.2",
+    "@storybook/react": "^7.5.2",
+    "@storybook/react-vite": "^7.5.2",
+    "@storybook/testing-library": "^0.2.2",
     "@turbo/gen": "^1.10.12",
     "@types/node": "^20.5.2",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "eslint-config-custom": "*",
+    "eslint-plugin-storybook": "^0.6.15",
     "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "rollup": "^4.1.4",
     "rollup-plugin-delete": "^2.0.0",
+    "storybook": "^7.5.2",
     "tsconfig": "*",
     "typescript": "^4.5.2"
   }
