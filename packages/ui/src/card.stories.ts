@@ -10,7 +10,7 @@ export default meta
 
 type Story = StoryObj<typeof Card>
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     title: "Docs",
     href: "https://turbo.build/repo/docs",
