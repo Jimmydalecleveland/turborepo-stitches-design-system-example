@@ -9,6 +9,11 @@ jobs:
   build_and_test:
     name: "Build and Test"
     runs-on: ubuntu-latest
+    # Remote Caching tokens for Turborepo
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+      TURBO_REMOTE_ONLY: true
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
