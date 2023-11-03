@@ -50,5 +50,8 @@
     "tsconfig": "*",
     "typescript": "^4.5.2",
     "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "@stitches/react": "^1.2.8"
   }
 }
