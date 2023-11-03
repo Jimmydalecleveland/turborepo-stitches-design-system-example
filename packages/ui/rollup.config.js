@@ -8,6 +8,7 @@ const config = defineConfig({
     {
       dir: 'dist',
       preserveModules: true,
+      preserveModulesRoot: 'src',
       sourcemap: true,
     },
   ],
@@ -15,6 +16,7 @@ const config = defineConfig({
     'react',
     'react/jsx-runtime',
     'react/jsx-dev-runtime',
+    '@stitches/react',
   ],
   plugins: [del({ targets: 'dist/*' }), typescript()],
 })
