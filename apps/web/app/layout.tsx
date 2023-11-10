@@ -19,8 +19,8 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <style
-          id="stitches"
           dangerouslySetInnerHTML={{ __html: getCssText() }}
+          id="stitches"
         />
       </head>
       <body className={inter.className}>{children}</body>
