@@ -4,7 +4,7 @@ import Button from './Button'
 const meta = {
   title: 'Components/Button',
   component: Button,
-  argTypes: { onClick: { action: true } },
+  argTypes: {onClick: {action: true}},
 } satisfies Meta<typeof Button>
 
 export default meta

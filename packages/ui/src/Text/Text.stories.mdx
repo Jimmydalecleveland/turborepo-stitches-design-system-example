@@ -1,0 +1,48 @@
+import { Canvas, Meta } from "@storybook/blocks";
+
+import { Text } from ".";
+
+<Meta title="components/Text/Vibes" Component={Text}/>
+
+# Vibes
+
+`Text` supports every `vibe`.
+
+```tsx
+<Text vibe="positive">Post was successfully created!</Text>
+```
+
+## Examples
+
+<Canvas>
+  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+    <Text>This is the default vibe.</Text>
+    <Text vibe="subdued">This text isn't as important.</Text>
+    <Text vibe="positive">Post was successfully created!</Text>
+    <Text vibe="warning">Your data usage is close to your limit</Text>
+    <Text vibe="critical">Are you sure you want to delete this post?</Text>
+    <Text vibe="attract">Click here to move forward</Text>
+  </div>
+</Canvas>
+
+## `size`, `weight`, and `vibe` combinations
+
+<Canvas>
+  <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+    <Text size="md">Neutral Vibe Text</Text>
+    <Text size="lg" vibe="subdued">Subudued Vibe Text</Text>
+    <Text size="sm" vibe="disabled">Disabled Vibe Text</Text>
+    <Text size="md" vibe="warning">Warning Vibe Text</Text>
+    <Text size="xl" vibe="critical">Critical Vibe Text</Text>
+    <Text size="lg" vibe="attract">Attract Vibe Text</Text>
+
+
+    <Text weight="bold">Neutral Vibe Text</Text>
+    <Text weight="bold" vibe="subdued">Subudued Vibe Text</Text>
+    <Text weight="bold" vibe="disabled">Disabled Vibe Text</Text>
+    <Text weight="bold" vibe="positive">Positive Vibe Text</Text>
+    <Text weight="bold" vibe="warning">Warning Vibe Text</Text>
+    <Text weight="bold" vibe="critical">Critical Vibe Text</Text>
+    <Text weight="bold" vibe="attract">Attract Vibe Text</Text>
+  </div>
+</Canvas>
