@@ -11,6 +11,7 @@ export {
   config,
   createTheme,
   getCssText,
+  globalStyles,
 } from './theme/stitches.config'
 
 export type {

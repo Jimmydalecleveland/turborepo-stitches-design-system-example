@@ -1,6 +1,8 @@
 import { createStitches, type CSS as StitchesCSS } from '@stitches/react'
 import * as colors from './colors'
-import { themeBreakpoints } from "./breakpoints";
+import { breakpointMinWidths, themeBreakpoints } from "./breakpoints";
+import type { TextTokens } from "./text";
+import { textSizes } from "./text";
 
 export const {
   css,
@@ -25,6 +27,17 @@ export const {
       boxDisabled: colors.gray[1],
 
       actionNeutral: 'slateblue',
+
+      // Text
+      textNeutral: colors.text[7],
+      textNeutralInverse: 'white',
+      textSubdued: colors.text[5],
+      textPositive: colors.positive[3],
+      textWarning: colors.warning[3],
+      textCritical: colors.critical[3],
+      textInfo: colors.info[3],
+      textAttract: colors.primary[7],
+      textDisabled: colors.text[4],
     },
     space: {
       gutter: '16px',
@@ -49,6 +62,8 @@ export const {
     },
     fontSizes: {
       baseRem: 16,
+      maxBp: breakpointMinWidths[breakpointMinWidths.length - 1],
+      ...textSizes,
     },
     fontWeights: {
       light: '300',
@@ -62,6 +77,10 @@ export const {
     lineHeights: {
       title: '1.25',
       body: '1.5',
+    },
+    fonts: {
+      title: "'Texturina', serif",
+      body: "'Karla', sans-serif",
     },
     radii: {
       sharp: '0px',
@@ -81,6 +100,33 @@ export const {
   media: {
     ...themeBreakpoints,
   },
+  utils: {
+    fz: (size: TextTokens): StitchesCSS => {
+      /**
+       * clamp() performs a calc() on each of its arguments,
+       * so there is no need to add a calc() to each of these values.
+       * Normally this is not valid css without a calc() wrapper.
+       */
+      const min = `$${size}Min / $baseRem * 1rem`
+      const max = `$${size}Max / $baseRem * 1rem`
+      const mid = `$${size}Max / $maxBp * 100vw`
+
+      /**
+       * The first fontSize is a fallback for browsers that don't support clamp().
+       * We are simply falling back to the min value for each text size.
+       *
+       * The `@supports` query is simply checking that calculations within clamp
+       * are also supported. It might be overkill, but that is tough to test.
+       */
+      return {
+        fontSize: `calc(${min})`,
+        '@supports (font-size: clamp(12 / 16 * 1rem, 18 / 1024 * 100vw, 2rem))':
+          {
+            fontSize: `clamp(${min}, ${mid}, ${max})`,
+          },
+      }
+    },
+  }
 })
 
 export type CSS = StitchesCSS<typeof config>
@@ -111,4 +157,23 @@ export type ThemeVibes =
   | 'info'
   | 'attract'
   | 'disabled'
+
+// This is a common global style that would be used in apps, but you can
+// also make your own global styles for different purposes, fonts, etc.
+export const globalStyles = globalCss({
+  '*': {
+    fontSize: '100%',
+  },
+
+  'html, body': {
+    margin: 0,
+    backgroundColor: '$boxSubdued',
+    height: '100%',
+  },
+
+  // required to push footer to bottom in inner layout from Next.js
+  '#__next': {
+    height: '100%',
+  },
+})
 
