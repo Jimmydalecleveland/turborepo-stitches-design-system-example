@@ -1,8 +1,8 @@
 // component exports
 export { default as Card } from "./card";
-export { Button, type ButtonProps } from "./Button"
+export { Button, type ButtonProps } from "./Button";
 
-// theme exports - 
+// theme exports -
 // for customizing and creating your own components
 export {
   css,
@@ -12,7 +12,7 @@ export {
   createTheme,
   getCssText,
   globalStyles,
-} from './theme/stitches.config'
+} from "./theme/stitches.config";
 
 export type {
   ThemeSpace,
@@ -23,4 +23,4 @@ export type {
   CSS,
   ThemeBreakPoints,
   ThemeVibes,
-} from './theme/stitches.config'
+} from "./theme/stitches.config";

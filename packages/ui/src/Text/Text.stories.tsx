@@ -1,16 +1,16 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import Text from './Text'
+import type { Meta, StoryObj } from "@storybook/react";
+import Text from "./Text";
 
 export default {
-  title: 'Components/Text',
+  title: "Components/Text",
   component: Text,
-} satisfies Meta<typeof Text>
+} satisfies Meta<typeof Text>;
 
 export const Default = {
   args: {
-    children: 'The neutral text',
+    children: "The neutral text",
   },
-}
+};
 
 export const Sizes: StoryObj<typeof Text> = {
   render: () => {
@@ -22,34 +22,34 @@ export const Sizes: StoryObj<typeof Text> = {
         <Text size="lg">Text can be `lg`</Text>
         <Text size="xl">Text can be `xl`</Text>
       </section>
-    )
+    );
   },
 
   parameters: {
-    controls: {hideNoControlsWarning: true},
+    controls: { hideNoControlsWarning: true },
   },
-}
+};
 
 export const SmallViewportSizes = {
   ...Sizes,
 
   parameters: {
     viewport: {
-      defaultViewport: 'small',
+      defaultViewport: "small",
     },
     chromatic: {
       viewports: [360],
     },
-    controls: {hideNoControlsWarning: true},
+    controls: { hideNoControlsWarning: true },
   },
-}
+};
 
 export const Weight = {
   args: {
-    weight: 'bold',
-    children: 'Text can have different weights',
+    weight: "bold",
+    children: "Text can have different weights",
   },
-}
+};
 
 export const Vibe = {
   render: () => (
@@ -61,7 +61,7 @@ export const Vibe = {
       <Text vibe="critical">Critical Vibe Text</Text>
       <Text vibe="attract">Attract Vibe Text</Text>
 
-      <hr/>
+      <hr />
 
       <Text size="xl" vibe="neutral">
         Neutral Vibe Text
@@ -82,7 +82,7 @@ export const Vibe = {
         Attract Vibe Text
       </Text>
 
-      <hr/>
+      <hr />
 
       <Text weight="bold" vibe="neutral">
         Neutral Vibe Text
@@ -106,6 +106,6 @@ export const Vibe = {
   ),
 
   parameters: {
-    controls: {hideNoControlsWarning: true},
+    controls: { hideNoControlsWarning: true },
   },
-}
+};

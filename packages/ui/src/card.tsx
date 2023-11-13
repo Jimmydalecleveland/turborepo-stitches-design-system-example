@@ -24,6 +24,6 @@ const Card = ({
       <p>{children}</p>
     </a>
   );
-}
+};
 
-export default Card
+export default Card;

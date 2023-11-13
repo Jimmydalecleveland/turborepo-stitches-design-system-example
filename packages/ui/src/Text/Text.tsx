@@ -1,32 +1,36 @@
-import type { CSS, ThemeFontWeights, ThemeVibes } from '../theme/stitches.config'
-import * as Styled from './Text.styles'
+import type {
+  CSS,
+  ThemeFontWeights,
+  ThemeVibes,
+} from "../theme/stitches.config";
+import * as Styled from "./Text.styles";
 
-export type TextSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
+export type TextSize = "xs" | "sm" | "md" | "lg" | "xl";
 
 export interface TextProps {
-  as?: 'span' | 'p' | 'strong' | 'em' | 'b' | 'i'
-  css?: CSS
-  children: React.ReactNode
-  display?: 'block' | 'inline'
-  size?: TextSize
-  weight?: ThemeFontWeights
-  align?: 'left' | 'center' | 'right'
-  decoration?: 'strikethrough' | 'underline'
-  italic?: boolean
-  vibe?: ThemeVibes
+  as?: "span" | "p" | "strong" | "em" | "b" | "i";
+  css?: CSS;
+  children: React.ReactNode;
+  display?: "block" | "inline";
+  size?: TextSize;
+  weight?: ThemeFontWeights;
+  align?: "left" | "center" | "right";
+  decoration?: "strikethrough" | "underline";
+  italic?: boolean;
+  vibe?: ThemeVibes;
 }
 
 const Text = ({
   as,
   css,
   children,
-  display = 'block',
-  size = 'md',
+  display = "block",
+  size = "md",
   weight,
   align,
   decoration,
   italic,
-  vibe = 'neutral',
+  vibe = "neutral",
 }: TextProps) => {
   return (
     <Styled.Text
@@ -42,7 +46,7 @@ const Text = ({
     >
       {children}
     </Styled.Text>
-  )
-}
+  );
+};
 
-export default Text
+export default Text;

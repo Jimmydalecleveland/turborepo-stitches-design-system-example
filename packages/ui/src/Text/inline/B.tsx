@@ -1,5 +1,5 @@
-import type { TextProps } from '../Text';
-import Text from '../Text'
+import type { TextProps } from "../Text";
+import Text from "../Text";
 
 /**
  * Should I use `<B>` or `<Strong>`?
@@ -8,9 +8,9 @@ import Text from '../Text'
  * while the <b> element is used to draw attention to text without indicating
  * that it's more important.
  */
-export type BProps = Omit<TextProps, 'as' | 'display' | 'weight' | 'align'>
+export type BProps = Omit<TextProps, "as" | "display" | "weight" | "align">;
 
-const B = ({css, children, vibe, size, italic, decoration}: BProps) => {
+const B = ({ css, children, vibe, size, italic, decoration }: BProps) => {
   return (
     <Text
       as="b"
@@ -24,7 +24,7 @@ const B = ({css, children, vibe, size, italic, decoration}: BProps) => {
     >
       {children}
     </Text>
-  )
-}
+  );
+};
 
-export default B
+export default B;

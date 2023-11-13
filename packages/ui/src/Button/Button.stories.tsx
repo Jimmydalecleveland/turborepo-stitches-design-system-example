@@ -1,13 +1,13 @@
-import type { Meta, StoryObj } from '@storybook/react'
-import Button from './Button'
+import type { Meta, StoryObj } from "@storybook/react";
+import Button from "./Button";
 
 const meta = {
-  title: 'Components/Button',
+  title: "Components/Button",
   component: Button,
-  argTypes: {onClick: {action: true}},
-} satisfies Meta<typeof Button>
+  argTypes: { onClick: { action: true } },
+} satisfies Meta<typeof Button>;
 
-export default meta
+export default meta;
 /**
  * This type allows properties like `play` to be typed correctly.
  * It also types the props correctly to the component, otherwise,
@@ -15,11 +15,10 @@ export default meta
  * object and see what `children` looks like. It should say "string",
  * when it should be "ReactNode".
  */
-type Story = StoryObj<typeof Button>
+type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   args: {
-    children: 'CLICK ME!',
+    children: "CLICK ME!",
   },
-}
-
+};

@@ -1,9 +1,9 @@
-import type { TextProps } from '../Text';
-import Text from '../Text'
+import type { TextProps } from "../Text";
+import Text from "../Text";
 
-export type EmProps = Omit<TextProps, 'as' | 'display' | 'italic' | 'align'>
+export type EmProps = Omit<TextProps, "as" | "display" | "italic" | "align">;
 
-const Em = ({css, children, vibe, weight, size, decoration}: EmProps) => {
+const Em = ({ css, children, vibe, weight, size, decoration }: EmProps) => {
   return (
     <Text
       as="em"
@@ -17,7 +17,7 @@ const Em = ({css, children, vibe, weight, size, decoration}: EmProps) => {
     >
       {children}
     </Text>
-  )
-}
+  );
+};
 
-export default Em
+export default Em;

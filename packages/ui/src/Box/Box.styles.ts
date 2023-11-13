@@ -1,147 +1,150 @@
-import type { CSS } from '../theme/stitches.config';
-import { css, styled } from '../theme/stitches.config'
-import { getAllBorderRadiiVariants, getAllSpacingVariants, } from '../theme/utils'
+import type { CSS } from "../theme/stitches.config";
+import { css, styled } from "../theme/stitches.config";
+import {
+  getAllBorderRadiiVariants,
+  getAllSpacingVariants,
+} from "../theme/utils";
 
 export const baseBox = css({
   border: 0,
   padding: 0,
   margin: 0,
-  boxSizing: 'border-box',
-})
+  boxSizing: "border-box",
+});
 
-export const Box = styled('div', baseBox, {
+export const Box = styled("div", baseBox, {
   variants: {
     display: {
       block: {
-        display: 'block',
+        display: "block",
       },
       inline: {
-        display: 'inline',
+        display: "inline",
       },
       inlineBlock: {
-        display: 'inline-block',
+        display: "inline-block",
       },
       flex: {
-        display: 'flex',
+        display: "flex",
       },
       none: {
-        display: 'none',
+        display: "none",
       },
     },
     flexDirection: {
       row: {
-        flexDirection: 'row',
+        flexDirection: "row",
       },
       column: {
-        flexDirection: 'column',
+        flexDirection: "column",
       },
       rowReverse: {
-        flexDirection: 'row-reverse',
+        flexDirection: "row-reverse",
       },
       columnReverse: {
-        flexDirection: 'column-reverse',
+        flexDirection: "column-reverse",
       },
     },
     alignItems: {
       center: {
-        alignItems: 'center',
+        alignItems: "center",
       },
       flexStart: {
-        alignItems: 'flex-start',
+        alignItems: "flex-start",
       },
       flexEnd: {
-        alignItems: 'flex-end',
+        alignItems: "flex-end",
       },
       baseline: {
-        alignItems: 'baseline',
+        alignItems: "baseline",
       },
       stretch: {
-        alignItems: 'stretch',
+        alignItems: "stretch",
       },
     },
     justifyContent: {
       center: {
-        justifyContent: 'center',
+        justifyContent: "center",
       },
       flexStart: {
-        justifyContent: 'flex-start',
+        justifyContent: "flex-start",
       },
       flexEnd: {
-        justifyContent: 'flex-end',
+        justifyContent: "flex-end",
       },
       spaceBetween: {
-        justifyContent: 'space-between',
+        justifyContent: "space-between",
       },
       spaceAround: {
-        justifyContent: 'space-around',
+        justifyContent: "space-around",
       },
     },
     corners: getAllBorderRadiiVariants(
       (val: string): CSS => ({
         borderRadius: val,
-      })
+      }),
     ),
     cornersTop: getAllBorderRadiiVariants(
       (val: string): CSS => ({
         borderTopRightRadius: val,
         borderTopLeftRadius: val,
-      })
+      }),
     ),
     cornersBottom: getAllBorderRadiiVariants(
       (val: string): CSS => ({
         borderBottomRightRadius: val,
         borderBottomLeftRadius: val,
-      })
+      }),
     ),
     vibe: {
       subdued: {
-        background: '$boxSubdued',
+        background: "$boxSubdued",
       },
       neutral: {
-        background: '$boxNeutral',
+        background: "$boxNeutral",
       },
       neutralInverse: {
-        background: '$boxNeutralInverse',
+        background: "$boxNeutralInverse",
       },
       attract: {
-        background: '$boxAttract',
+        background: "$boxAttract",
       },
       positive: {
-        background: '$boxPositive',
+        background: "$boxPositive",
       },
       warning: {
-        background: '$boxWarning',
+        background: "$boxWarning",
       },
       critical: {
-        background: '$boxCritical',
+        background: "$boxCritical",
       },
       info: {
-        background: '$boxInfo',
+        background: "$boxInfo",
       },
       disabled: {
-        background: '$boxDisabled',
+        background: "$boxDisabled",
       },
     },
     shadow: {
       none: {
-        boxShadow: '$none',
+        boxShadow: "$none",
       },
       low: {
-        boxShadow: '$low',
+        boxShadow: "$low",
       },
       medium: {
-        boxShadow: '$medium',
+        boxShadow: "$medium",
       },
       high: {
-        boxShadow: '$high',
+        boxShadow: "$high",
       },
       highest: {
-        boxShadow: '$highest',
+        boxShadow: "$highest",
       },
     },
     fullWidth: {
       true: {
-        width: '100%',
+        width: "100%",
       },
     },
     padding: getAllSpacingVariants((val: string) => ({
@@ -168,6 +171,6 @@ export const Box = styled('div', baseBox, {
       paddingRight: val,
     })),
   },
-})
+});
 
-export type BoxStyledProps = React.ComponentProps<typeof Box>
+export type BoxStyledProps = React.ComponentProps<typeof Box>;

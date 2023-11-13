@@ -1,9 +1,9 @@
-import * as Styled from './Box.styles'
+import * as Styled from "./Box.styles";
 
-export type Align = 'flexStart' | 'flexEnd' | 'center' | 'baseline' | 'stretch'
+export type Align = "flexStart" | "flexEnd" | "center" | "baseline" | "stretch";
 
 export interface BoxProps extends Styled.BoxStyledProps {
-  as?: React.ElementType
+  as?: React.ElementType;
 }
 
 /**
@@ -67,7 +67,7 @@ const Box = ({
     >
       {children}
     </Styled.Box>
-  )
-}
+  );
+};
 
-export default Box
+export default Box;

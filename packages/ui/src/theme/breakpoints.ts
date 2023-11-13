@@ -3,14 +3,14 @@
  * Intended for use when indexing `breakpointWidths` to narrow `number` to
  * only the available breakpoints possible.
  */
-export type BreakpointRange = 1 | 2 | 3
+export type BreakpointRange = 1 | 2 | 3;
 
 /**
  * The possible keys for `theme` breakpoints. This is distinct from
  * `BreakpointSelector` (key with `@` prefix) as that is used for
  * setting variants at specific breakpoints.
  */
-export type Breakpoint = `bp${BreakpointRange}`
+export type Breakpoint = `bp${BreakpointRange}`;
 
 /**
  * Used for setting variants at specific breakpoints. `@initial` must be
@@ -19,20 +19,20 @@ export type Breakpoint = `bp${BreakpointRange}`
  * @example
  * <Box padding={{ '@initial': '02', '@bp1': '03' }} />
  */
-export type BreakpointSelector = '@initial' | `@${Breakpoint}`
+export type BreakpointSelector = "@initial" | `@${Breakpoint}`;
 
 /**
  * The number values used for `@media (min-width: value)` queries. These are
  * useful for setting `viewports` in Storybook, and other outside situations
  * where you can't use the `theme` object or styles conveniently.
  */
-export const breakpointMinWidths = [640, 768, 1024] as const
+export const breakpointMinWidths = [640, 768, 1024] as const;
 
 /**
  * The value format for `media` values in the `theme` object.
  */
 export type BreakpointValue =
-  `(min-width: ${(typeof breakpointMinWidths)[number]}px)`
+  `(min-width: ${(typeof breakpointMinWidths)[number]}px)`;
 
 /**
  * The `theme` breakpoints object. This is exported here for use outside of
@@ -42,7 +42,7 @@ export const themeBreakpoints: Record<Breakpoint, BreakpointValue> = {
   bp1: `(min-width: ${breakpointMinWidths[0]}px)`,
   bp2: `(min-width: ${breakpointMinWidths[1]}px)`,
   bp3: `(min-width: ${breakpointMinWidths[2]}px)`,
-}
+};
 
 /**
  * This is a helper type which is mostly used in the `theme/utils.ts` file.
@@ -56,5 +56,5 @@ export const themeBreakpoints: Record<Breakpoint, BreakpointValue> = {
  * };
  */
 export type GetBreakpointVariants<T> = {
-  [K in BreakpointSelector]?: T
-}
+  [K in BreakpointSelector]?: T;
+};
