@@ -4,6 +4,7 @@ export * from "./Box";
 export * from "./Button";
 export * from "./Text";
 export * from "./Heading";
+export * from "./Icon";
 
 // theme exports -
 // for customizing and creating your own components

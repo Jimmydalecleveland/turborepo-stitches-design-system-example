@@ -41,7 +41,7 @@ export const {
 
       // Heading
       headingNeutral: colors.text[8],
-      headingNeutralInverse: 'white',
+      headingNeutralInverse: "white",
       headingSubdued: colors.text[6],
       headingPositive: colors.positive[4],
       headingAttract: colors.primary[7],
@@ -49,6 +49,26 @@ export const {
       headingCritical: colors.critical[4],
       headingDisabled: colors.text[3],
 
+      // Icon
+      iconStrokeNeutral: colors.gray[7],
+      iconStrokeNeutralInverse: "white",
+      iconStrokePositive: colors.positive[2],
+      iconStrokeWarning: colors.warning[3],
+      iconStrokeCritical: colors.critical[2],
+      iconStrokeInfo: colors.info[3],
+      iconStrokeDisabled: colors.gray[2],
+      iconStrokeAttract: colors.primary[5],
+      iconStrokeSubdued: colors.text[5],
+
+      iconBackgroundNeutral: "white",
+      iconBackgroundNeutralInverse: colors.primary[8],
+      iconBackgroundPositive: colors.positive[0],
+      iconBackgroundWarning: colors.warning[0],
+      iconBackgroundCritical: colors.critical[0],
+      iconBackgroundInfo: colors.info[0],
+      iconBackgroundDisabled: colors.gray[1],
+      iconBackgroundAttract: colors.primary[0],
+      iconBackgroundSubdued: colors.tertiary[1],
     },
     space: {
       gutter: "16px",
