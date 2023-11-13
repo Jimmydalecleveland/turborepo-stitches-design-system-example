@@ -1,5 +1,15 @@
 # @jimmydalecleveland/stitches-ui-example
 
+## 0.4.0
+
+### Minor Changes
+
+- 6bb6072: Header component has been added with stories and tests. This component is intended to be used for all heading tags (h1-h6) and has its own default font and weights. The Heading component uses the `fz` utility property which gives responsive font sizing to any text within it.
+
+### Patch Changes
+
+- b35289e: The default lightest gray in the theme has been updated to be noticeable next to white. It was too close to white before.
+
 ## 0.3.0
 
 ### Minor Changes
