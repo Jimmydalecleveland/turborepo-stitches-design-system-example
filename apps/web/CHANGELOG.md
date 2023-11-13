@@ -1,5 +1,17 @@
 # web
 
+## 1.3.0
+
+### Minor Changes
+
+- b35289e: The beginning components have been added as a quick example to the web app (Next.js), and the global styles have been applied in the root layout.
+
+### Patch Changes
+
+- Updated dependencies [b35289e]
+- Updated dependencies [6bb6072]
+  - @jimmydalecleveland/stitches-ui-example@0.4.0
+
 ## 1.2.0
 
 ### Minor Changes
