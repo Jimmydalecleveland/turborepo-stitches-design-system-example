@@ -4,6 +4,11 @@ import "@fontsource/karla/400.css";
 import "@fontsource/karla/500.css";
 import "@fontsource/karla/600.css";
 import "@fontsource/karla/700.css";
+import "@fontsource/texturina/300.css";
+import "@fontsource/texturina/400.css";
+import "@fontsource/texturina/500.css";
+import "@fontsource/texturina/600.css";
+import "@fontsource/texturina/700.css";
 import { globalCss, globalStyles as defaultGlobalStyles } from "../src";
 import { breakpointMinWidths } from "../src/theme/breakpoints";
 
@@ -106,7 +111,6 @@ const preview: Preview = {
 export const globalStyles = globalCss({
   "html, body": {
     padding: "$00",
-    fontSize: "16px", // something, maybe storybook, is setting this to 18px
     fontFamily: "'Karla', sans-serif",
   },
 });
