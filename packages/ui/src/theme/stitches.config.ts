@@ -38,6 +38,17 @@ export const {
       textInfo: colors.info[3],
       textAttract: colors.primary[7],
       textDisabled: colors.text[4],
+
+      // Heading
+      headingNeutral: colors.text[8],
+      headingNeutralInverse: 'white',
+      headingSubdued: colors.text[6],
+      headingPositive: colors.positive[4],
+      headingAttract: colors.primary[7],
+      headingWarning: colors.warning[4],
+      headingCritical: colors.critical[4],
+      headingDisabled: colors.text[3],
+
     },
     space: {
       gutter: "16px",
