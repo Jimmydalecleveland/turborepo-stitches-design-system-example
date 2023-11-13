@@ -5,53 +5,53 @@ import "@fontsource/karla/500.css";
 import "@fontsource/karla/600.css";
 import "@fontsource/karla/700.css";
 import { globalCss, globalStyles as defaultGlobalStyles } from "../src";
-import { breakpointMinWidths } from '../src/theme/breakpoints';
+import { breakpointMinWidths } from "../src/theme/breakpoints";
 
 const preview: Preview = {
   decorators: [
     (Story) => {
       defaultGlobalStyles();
       globalStyles();
-      return <Story />
-    }
+      return <Story />;
+    },
   ],
 
   parameters: {
-    actions: {argTypesRegex: "^on[A-Z].*"},
+    actions: { argTypesRegex: "^on[A-Z].*" },
 
     backgrounds: {
-      default: 'subdued',
+      default: "subdued",
       values: [
         {
-          name: 'neutral',
+          name: "neutral",
           value: "var(--colors-boxNeutral)",
         },
         {
-          name: 'subdued',
+          name: "subdued",
           value: "var(--colors-boxSubdued)",
         },
         {
-          name: 'info',
+          name: "info",
           value: "var(--colors-boxInfo)",
         },
         {
-          name: 'positive',
+          name: "positive",
           value: "var(--colors-boxPositive)",
         },
         {
-          name: 'warning',
+          name: "warning",
           value: "var(--colors-boxWarning)",
         },
         {
-          name: 'critical',
+          name: "critical",
           value: "var(--colors-boxCritical)",
         },
         {
-          name: 'attract',
+          name: "attract",
           value: "var(--colors-boxAttract)",
         },
         {
-          name: 'critical',
+          name: "critical",
           value: "var(--colors-boxDisabled)",
         },
       ],
@@ -67,15 +67,15 @@ const preview: Preview = {
     viewport: {
       viewports: {
         small: {
-          name: 'Small Mobile',
+          name: "Small Mobile",
           styles: {
-            width: '360px',
+            width: "360px",
             height: "680px",
           },
           type: "mobile",
         },
         bp1: {
-          name: 'bp1',
+          name: "bp1",
           styles: {
             width: `${breakpointMinWidths[0]}px`,
             height: "1080px",
@@ -83,7 +83,7 @@ const preview: Preview = {
           type: "mobile",
         },
         bp2: {
-          name: 'bp2',
+          name: "bp2",
           styles: {
             width: `${breakpointMinWidths[1]}px`,
             height: "1080px",
@@ -91,16 +91,15 @@ const preview: Preview = {
           type: "tablet",
         },
         bp3: {
-          name: 'bp3',
+          name: "bp3",
           styles: {
             width: `${breakpointMinWidths[2]}px`,
             height: "100vh",
           },
           type: "desktop",
         },
-      }
+      },
     },
-
   },
 };
 

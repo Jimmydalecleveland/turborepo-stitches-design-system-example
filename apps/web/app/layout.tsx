@@ -22,9 +22,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: getCssText() }}
           id="stitches"
         />
+        <title>Default Title</title>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
 }
-

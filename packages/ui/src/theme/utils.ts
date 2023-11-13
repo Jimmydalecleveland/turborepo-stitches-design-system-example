@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any -- any is needed for CSS unknown properties */
 /* eslint-disable tsdoc/syntax -- This rule is causing valid JSDoc syntax to have errors */
-import type { BreakpointSelector, GetBreakpointVariants } from './breakpoints'
-import type { CSS, ThemeRadii } from './stitches.config';
-import { config } from './stitches.config'
+import type { BreakpointSelector, GetBreakpointVariants } from "./breakpoints";
+import type { CSS, ThemeRadii } from "./stitches.config";
+import { config } from "./stitches.config";
 
 /**
  * This helper is meant to make individual theme token range functions
@@ -19,54 +19,59 @@ import { config } from './stitches.config'
  */
 export function getCssWithThemeValues(
   cssProperty: keyof CSS,
-  themeProperty: keyof typeof config.theme
+  themeProperty: keyof typeof config.theme,
 ): Record<string, any> {
-  return Object.keys(config.theme[themeProperty]).reduce<Record<string, any>>((acc, curr) => {
-    const typedCurrKey =
-      curr as keyof (typeof config.theme)[typeof themeProperty]
-    acc[curr] = {
-      [cssProperty]: config.theme[themeProperty][typedCurrKey],
-    }
+  return Object.keys(config.theme[themeProperty]).reduce<Record<string, any>>(
+    (acc, curr) => {
+      const typedCurrKey =
+        curr as keyof (typeof config.theme)[typeof themeProperty];
+      acc[curr] = {
+        [cssProperty]: config.theme[themeProperty][typedCurrKey],
+      };
 
-    return acc
-  }, {})
+      return acc;
+    },
+    {},
+  );
 }
 
-export function getAllSpacingVariants(cssShapeCallback: (val: string) => CSS): Record<string, any> {
+export function getAllSpacingVariants(
+  cssShapeCallback: (val: string) => CSS,
+): Record<string, any> {
   return Object.keys(config.theme.space).reduce<Record<string, any>>(
     (acc, curr) => {
-      const typedCurrKey = curr as keyof typeof config.theme.space
-      const val = config.theme.space[typedCurrKey]
+      const typedCurrKey = curr as keyof typeof config.theme.space;
+      const val = config.theme.space[typedCurrKey];
 
       // Create the key;value at the current key, with the desired
       // object shape as the value.
       // e.g. { small: { width: "14px" } }
-      acc[curr] = cssShapeCallback(val)
-      return acc
+      acc[curr] = cssShapeCallback(val);
+      return acc;
     },
-    {}
-  )
+    {},
+  );
 }
 
-export type VariantCSS<T extends string> = Record<T, CSS>
+export type VariantCSS<T extends string> = Record<T, CSS>;
 
 export function getAllBorderRadiiVariants(
-  cssShapeCallback: (val: string) => CSS
+  cssShapeCallback: (val: string) => CSS,
 ): VariantCSS<ThemeRadii> {
   /* TODO: These castings are unfortunate but I'm currently not knowledgeable enough to avoid them
    * with the amount of time I'm willing to spend on this.
    */
-  const tokens = Object.keys(config.theme.radii) as ThemeRadii[]
-  const initial: VariantCSS<ThemeRadii> = {} as VariantCSS<ThemeRadii>
+  const tokens = Object.keys(config.theme.radii) as ThemeRadii[];
+  const initial: VariantCSS<ThemeRadii> = {} as VariantCSS<ThemeRadii>;
   return tokens.reduce<VariantCSS<ThemeRadii>>((acc, curr) => {
-    const val = config.theme.radii[curr]
-    acc[curr] = cssShapeCallback(val)
-    return acc
-  }, initial)
+    const val = config.theme.radii[curr];
+    acc[curr] = cssShapeCallback(val);
+    return acc;
+  }, initial);
 }
 
 export function getFontWeights(): Record<string, any> {
-  return getCssWithThemeValues('fontWeight', 'fontWeights')
+  return getCssWithThemeValues("fontWeight", "fontWeights");
 }
 
 /**
@@ -98,22 +103,22 @@ export function getFontWeights(): Record<string, any> {
  */
 export function createVariantMapping<
   TProp extends string,
-  TVariant extends string
+  TVariant extends string,
 >(
   value: TProp | GetBreakpointVariants<TProp>,
-  valueMap: Record<TProp, TVariant>
+  valueMap: Record<TProp, TVariant>,
 ): TVariant | GetBreakpointVariants<TVariant> {
-  if (typeof value === 'string') {
-    return valueMap[value]
+  if (typeof value === "string") {
+    return valueMap[value];
   }
 
   return (Object.keys(value) as BreakpointSelector[]).reduce<
     GetBreakpointVariants<TVariant>
   >((acc, key) => {
-    const propKey = value[key]
-    if (!propKey) return acc
+    const propKey = value[key];
+    if (!propKey) return acc;
 
-    acc[key] = valueMap[propKey]
-    return acc
-  }, {})
+    acc[key] = valueMap[propKey];
+    return acc;
+  }, {});
 }
