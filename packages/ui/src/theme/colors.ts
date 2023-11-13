@@ -90,7 +90,7 @@ export const extended: FullColorArray = [
  * Think background, form fields, dividers, etc.
  */
 export const gray: FullColorArray = [
-  "hsla(210, 15%, 98%, 1)", // Very Light Gray
+  "hsla(210, 15%, 94%, 1)", // Very Light Gray
   "hsla(210, 15%, 88%, 1)", // Light Gray
   "hsla(210, 10%, 78%, 1)", // Soft Gray
   "hsla(210, 10%, 68%, 1)", // Medium Gray
