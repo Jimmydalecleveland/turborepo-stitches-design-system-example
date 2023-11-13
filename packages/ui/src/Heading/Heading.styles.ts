@@ -1,6 +1,6 @@
-import { styled } from '../theme/stitches.config'
-import { baseBox } from '../Box/Box.styles'
-import { universalTextVariants } from '../Text/Text.styles'
+import { styled } from "../theme/stitches.config";
+import { baseBox } from "../Box/Box.styles";
+import { universalTextVariants } from "../Text/Text.styles";
 
 /**
  * h3 is the default because it's the first level that should be
