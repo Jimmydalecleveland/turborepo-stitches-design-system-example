@@ -1,6 +1,9 @@
 // component exports
 export { default as Card } from "./card";
-export { Button, type ButtonProps } from "./Button";
+export * from "./Box";
+export * from "./Button";
+export * from "./Text";
+export * from "./Heading";
 
 // theme exports -
 // for customizing and creating your own components
