@@ -96,7 +96,11 @@ Vibes like `positive`, `warning`, `critical`, and `info` do not have the typical
 
 ## The Components
 
-- Box - The foundation of most components. It
-- Text - The majority of text/copy on a page.
-- Heading - A component for `hx` tags, that uses `clamp` for responsive resizing.
-- Button
+- `Box`: The foundation of most components. It
+- `Text`: The majority of text/copy on a page.
+- `Heading`: A component for `hx` tags, that uses `clamp` for responsive resizing.
+- `Button`:
+- `Icons` - Each icon is a named component, that uses the `vibe` interface, as well as a `backgroundVibe` for more flexibility.
+  - Icons also have built in support within certain components, such as `Button` placing it on the left or right and making it match the `vibe` of the button.
+  - I wanted `Icons` to be its own export that used method calling (e.g. `Icons.Rocket`), but ran into tree-shaking issues with my first attempts.
+  - I have only added a few icons as examples, but they are all from [Heroicons](https://heroicons.com/). I simply have overrides for this Design System.
