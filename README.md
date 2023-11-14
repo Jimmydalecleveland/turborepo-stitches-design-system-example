@@ -23,6 +23,11 @@ perfect, because that's just how the development world is and I like it when peo
     code-splitting for JS and CSS. Rollup is the only one that gave me the full experience I was looking for.
 - [Storybook](https://storybook.js.org/) for component documentation and testing.
   - I've used Storybook for years, and it's still the best option for rapidly developing and maintaining visual components.
+- [GitHub Actions](https://github.com/features/actions) for CI/CD. This includes building, linting, testing, and uses Turborepo remote caching for less friction (downtime) on PRs.
+  - While I don't enjoy the difficulty of troubleshooting Github Actions locally, they are very simple when you know some of the common patterns.
+- [Changesets](https://github.com/changesets/changesets) for managing versioning and publishing through CI.
+  - This is my favorite way of handling version updates for published packages on a team, and possibly even for solo development. It strikes a great balance between automation and control for me. 
+  - Each time a PR with a changeset is merged, it will be published to GitHub Packages and a release will be created.
 - [Fontsource](https://fontsource.org/) for self-hosted fonts (default and can be overridden).
   - In my apps I often use `next/font`, particularly for minimizing layout shift, but I wanted an agnostic self-hosted
     option as the default.
@@ -96,7 +101,11 @@ Vibes like `positive`, `warning`, `critical`, and `info` do not have the typical
 
 ## The Components
 
-- Box - The foundation of most components. It
-- Text - The majority of text/copy on a page.
-- Heading - A component for `hx` tags, that uses `clamp` for responsive resizing.
-- Button
+- `Box`: The foundation of most components. It
+- `Text`: The majority of text/copy on a page.
+- `Heading`: A component for `hx` tags, that uses `clamp` for responsive resizing.
+- `Button`:
+- `Icons` - Each icon is a named component, that uses the `vibe` interface, as well as a `backgroundVibe` for more flexibility.
+  - Icons also have built in support within certain components, such as `Button` placing it on the left or right and making it match the `vibe` of the button.
+  - I wanted `Icons` to be its own export that used method calling (e.g. `Icons.Rocket`), but ran into tree-shaking issues with my first attempts.
+  - I have only added a few icons as examples, but they are all from [Heroicons](https://heroicons.com/). I simply have overrides for this Design System.
