@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Heading,
+  Rocket,
   Text,
 } from "@jimmydalecleveland/stitches-ui-example";
 
@@ -20,6 +21,7 @@ export default function Page(): React.ReactElement {
         </Text>
       </Box>
       <Button>Click Me!</Button>
+      <Rocket backgroundVibe="attract" vibe="attract" />
     </main>
   );
 }
