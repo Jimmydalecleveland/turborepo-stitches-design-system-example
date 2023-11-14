@@ -1,5 +1,11 @@
 # @jimmydalecleveland/stitches-ui-example
 
+## 0.5.0
+
+### Minor Changes
+
+- bd54c1e: This update adds Icons, which follow the Vibes pattern, and have a separate `backgroundVibe` property for more flexibility depending on where the icons are placed. I've only added the first handful of icons, and the original SVGs all come from https://heroicons.com/.
+
 ## 0.4.0
 
 ### Minor Changes
