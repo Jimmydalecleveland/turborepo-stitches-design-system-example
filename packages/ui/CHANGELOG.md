@@ -1,5 +1,11 @@
 # @jimmydalecleveland/stitches-ui-example
 
+## 0.6.0
+
+### Minor Changes
+
+- 02068f6: `Inline` component has been added to the mix. The purpose of `Inline` is to wrap content that is meant to be rendered inline and add alignment and spacing for common layouts.
+
 ## 0.5.0
 
 ### Minor Changes
