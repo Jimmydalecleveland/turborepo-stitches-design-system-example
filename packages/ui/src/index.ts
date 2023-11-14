@@ -6,6 +6,7 @@ export * from "./Text";
 export * from "./Heading";
 export * from "./Icon";
 export * from "./Inline";
+export * from "./Divider";
 
 // theme exports -
 // for customizing and creating your own components
