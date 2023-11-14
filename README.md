@@ -69,6 +69,8 @@ By default, Turborepo will cache locally. This repo uses my own Vercel account t
 
 I was largely influenced by [Braid](https://seek-oss.github.io/braid-design-system/), and much of Mark Dalgleish's work, for much of this system. I've also studied many grid and column layout systems from the usual suspects (Material, Foundation, Semantic, Chakra, etc.) and taken ideas about many other components from them.
 
+This system makes heavy use of composition, even for spacing and layouts with components like `Stack` which you may have seen in various forms of other systems. I've come to enjoy the reliability of this design philosophy, but I have no problem admitting it is not without flaws and can feel verbose at times. For me, personally, it is worth the tradeoffs because I have been in some nightmare situations with previous systems that rely on spacing being handled either inside components (big ew) or by overwriting child styles from the parent. Finding what is actually applying spacing an alignment in these systems can eventually be a huge headache, especially without a component snapshot diffing tool like Chromatic (Storybook team).
+
 It's also really important to note that this Design System was much more complicated than many others I've built due to the challenge of supporting multiple "brands" or themes. Most Design Systems I encounter do not support this functionality well, even though they are made to be adopted however you wish, they don't allow
 for easy overriding of colors, fonts, spacing, etc. after you have set up the initial theme and components. It honestly might seem like they do if you haven't really tried to apply other popular Design Systems in this fashion, but when I put them to the test, they became impossible or extremely difficult to accomplish this ask.
 
@@ -99,6 +101,18 @@ The `neutral` and `neutralInverse` are there to support light and dark themes wi
 
 Vibes like `positive`, `warning`, `critical`, and `info` do not have the typical 10 color range the others do, but instead only need 5. These are used for callouts, form validation, and such. I hope the names are self-explanatory, which is why I chose them to be in this format.
 
+### Responsive Properties
+Stitches encourages the use of immutable style rules, which can be unintuitive for situations where you'd normally use media queries in the actual styling.
+Where this becomes powerful, though, is the ability to apply properties responsively when a component is used. Take this simple example:
+```tsx
+<Inline alignX={{ '@initial': 'center', '@bp2': 'left' }}>
+  <Text>Some text</Text>
+  <Text>Some more text</Text>
+</Inline>
+```
+
+Here, the `Inline` component is using the `alignX` prop to align the children horizontally. The `alignX` prop is typed to accept a `ResponsiveValue` which is an object with keys that match the breakpoints in the `stitches.config.ts` file. The values of the object are the values you want to apply at each breakpoint. In this case, the first breakpoint is `@initial` which is the default value, and the second breakpoint is `@bp2` which is the second breakpoint in the config file. This is a shorthand for `@media (min-width: 768px)` (default). The final result is that the elements will be centered on smaller devices and left aligned on larger.
+
 ## The Components
 
 - `Box`: The foundation of most components. It
@@ -109,3 +123,5 @@ Vibes like `positive`, `warning`, `critical`, and `info` do not have the typical
   - Icons also have built in support within certain components, such as `Button` placing it on the left or right and making it match the `vibe` of the button.
   - I wanted `Icons` to be its own export that used method calling (e.g. `Icons.Rocket`), but ran into tree-shaking issues with my first attempts.
   - I have only added a few icons as examples, but they are all from [Heroicons](https://heroicons.com/). I simply have overrides for this Design System.
+- `Inline` - The first "layout control" component. Used for laying out other components and elements in a row, and controlling alignment and spacing across the elements.
+  - `Inline` is a common component for using "Responsive Properties" as described above.

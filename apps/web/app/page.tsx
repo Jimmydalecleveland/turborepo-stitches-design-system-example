@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Heading,
+  Inline,
   Rocket,
   Text,
 } from "@jimmydalecleveland/stitches-ui-example";
@@ -20,8 +21,10 @@ export default function Page(): React.ReactElement {
           voluptatum.
         </Text>
       </Box>
-      <Button>Click Me!</Button>
-      <Rocket backgroundVibe="attract" vibe="attract" />
+      <Inline space="05">
+        <Button>Click Me!</Button>
+        <Rocket backgroundVibe="attract" vibe="attract" />
+      </Inline>
     </main>
   );
 }
