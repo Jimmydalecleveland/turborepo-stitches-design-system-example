@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { css } from "../theme/stitches.config";
-import * as Icons from "./Icon";
 import type { Svg } from "./Svg";
+import * as Icons from ".";
 
 export default {
   title: "Components/Icons",
@@ -26,7 +26,7 @@ export default {
         "info",
       ],
     },
-    background: {
+    backgroundVibe: {
       control: "select",
       options: [
         "neutral",
@@ -68,18 +68,18 @@ export const IconBackgroundComparison = {
   render: () => (
     <div className={iconGrid()}>
       <Icons.Rocket vibe="positive" size="xl" />
-      <Icons.Rocket vibe="positive" background="neutral" size="xl" />
+      <Icons.Rocket vibe="positive" backgroundVibe="neutral" size="xl" />
       <Icons.Rocket
         vibe="neutralInverse"
-        background="neutralInverse"
+        backgroundVibe="neutralInverse"
         size="xl"
       />
-      <Icons.Rocket vibe="positive" background="positive" size="xl" />
-      <Icons.Rocket vibe="warning" background="warning" size="xl" />
-      <Icons.Rocket vibe="critical" background="critical" size="xl" />
-      <Icons.Rocket vibe="info" background="info" size="xl" />
-      <Icons.Rocket vibe="disabled" background="disabled" size="xl" />
-      <Icons.Rocket vibe="subdued" background="subdued" size="xl" />
+      <Icons.Rocket vibe="positive" backgroundVibe="positive" size="xl" />
+      <Icons.Rocket vibe="warning" backgroundVibe="warning" size="xl" />
+      <Icons.Rocket vibe="critical" backgroundVibe="critical" size="xl" />
+      <Icons.Rocket vibe="info" backgroundVibe="info" size="xl" />
+      <Icons.Rocket vibe="disabled" backgroundVibe="disabled" size="xl" />
+      <Icons.Rocket vibe="subdued" backgroundVibe="subdued" size="xl" />
     </div>
   ),
 
