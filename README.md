@@ -23,6 +23,11 @@ perfect, because that's just how the development world is and I like it when peo
     code-splitting for JS and CSS. Rollup is the only one that gave me the full experience I was looking for.
 - [Storybook](https://storybook.js.org/) for component documentation and testing.
   - I've used Storybook for years, and it's still the best option for rapidly developing and maintaining visual components.
+- [GitHub Actions](https://github.com/features/actions) for CI/CD. This includes building, linting, testing, and uses Turborepo remote caching for less friction (downtime) on PRs.
+  - While I don't enjoy the difficulty of troubleshooting Github Actions locally, they are very simple when you know some of the common patterns.
+- [Changesets](https://github.com/changesets/changesets) for managing versioning and publishing through CI.
+  - This is my favorite way of handling version updates for published packages on a team, and possibly even for solo development. It strikes a great balance between automation and control for me. 
+  - Each time a PR with a changeset is merged, it will be published to GitHub Packages and a release will be created.
 - [Fontsource](https://fontsource.org/) for self-hosted fonts (default and can be overridden).
   - In my apps I often use `next/font`, particularly for minimizing layout shift, but I wanted an agnostic self-hosted
     option as the default.
