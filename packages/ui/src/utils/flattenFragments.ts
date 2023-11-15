@@ -6,7 +6,13 @@
  *
  * Returns React children into an array, flattening fragments.
  */
-import { Children, cloneElement, isValidElement, type ReactChild, type ReactNode, } from "react";
+import {
+  Children,
+  cloneElement,
+  isValidElement,
+  type ReactChild,
+  type ReactNode,
+} from "react";
 // fyi: react-is was made by the React team at Facebook
 import { isFragment } from "react-is";
 

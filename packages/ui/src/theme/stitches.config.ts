@@ -132,10 +132,10 @@ export const {
       highest: "0 20px 24px -4px rgba(0, 31, 41, 0.1)",
     },
     borderWidths: {
-      sm: '1px',
-      md: '2px',
-      lg: '4px',
-      xl: '6px',
+      sm: "1px",
+      md: "2px",
+      lg: "4px",
+      xl: "6px",
     },
   },
   media: {

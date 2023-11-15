@@ -11,30 +11,30 @@ perfect, because that's just how the development world is and I like it when peo
 - [TypeScript](https://www.typescriptlang.org/) for static type checking throughout the entire repo.
 - [Next.js](https://nextjs.org/) as the example framework for testing/dogfooding/etc. the Design System within the
   monorepo.
-    - Any other framework accepting React would do, this is just the most popular one and the one that ships with
-      Turborepo, currently.
+  - Any other framework accepting React would do, this is just the most popular one and the one that ships with
+    Turborepo, currently.
 - [Stitches](https://stitches.dev/) as the CSS-in-TS library.
-    - I've used a lot of CSS-in-JS libraries over the years and Stitches is one of my favorites, although it is now
-      deprecated :(.
-    - Still, the examples are useful, and you can use [Class Variant Authority](https://cva.style/docs) with something
-      like [TailwindCSS](https://tailwindcss.com/) for a very similar experience.
+  - I've used a lot of CSS-in-JS libraries over the years and Stitches is one of my favorites, although it is now
+    deprecated :(.
+  - Still, the examples are useful, and you can use [Class Variant Authority](https://cva.style/docs) with something
+    like [TailwindCSS](https://tailwindcss.com/) for a very similar experience.
 - [Rollup](https://rollupjs.org/guide/en/) as the TS/JS/CSS bundler.
-    - I've used many bundlers in the past, and tried many more while on the search for proper tree-shaking and
-      code-splitting for JS and CSS. Rollup is the only one that gave me the full experience I was looking for.
+  - I've used many bundlers in the past, and tried many more while on the search for proper tree-shaking and
+    code-splitting for JS and CSS. Rollup is the only one that gave me the full experience I was looking for.
 - [Storybook](https://storybook.js.org/) for component documentation and testing.
-    - I've used Storybook for years, and it's still the best option for rapidly developing and maintaining visual
-      components.
+  - I've used Storybook for years, and it's still the best option for rapidly developing and maintaining visual
+    components.
 - [GitHub Actions](https://github.com/features/actions) for CI/CD. This includes building, linting, testing, and uses
   Turborepo remote caching for less friction (downtime) on PRs.
-    - While I don't enjoy the difficulty of troubleshooting Github Actions locally, they are very simple when you know
-      some of the common patterns.
+  - While I don't enjoy the difficulty of troubleshooting Github Actions locally, they are very simple when you know
+    some of the common patterns.
 - [Changesets](https://github.com/changesets/changesets) for managing versioning and publishing through CI.
-    - This is my favorite way of handling version updates for published packages on a team, and possibly even for solo
-      development. It strikes a great balance between automation and control for me.
-    - Each time a PR with a changeset is merged, it will be published to GitHub Packages and a release will be created.
+  - This is my favorite way of handling version updates for published packages on a team, and possibly even for solo
+    development. It strikes a great balance between automation and control for me.
+  - Each time a PR with a changeset is merged, it will be published to GitHub Packages and a release will be created.
 - [Fontsource](https://fontsource.org/) for self-hosted fonts (default and can be overridden).
-    - In my apps I often use `next/font`, particularly for minimizing layout shift, but I wanted an agnostic self-hosted
-      option as the default.
+  - In my apps I often use `next/font`, particularly for minimizing layout shift, but I wanted an agnostic self-hosted
+    option as the default.
 - [ESLint](https://eslint.org/) for linting, with [Prettier](https://prettier.io/) for formatting.
 
 ### Apps and Packages
@@ -47,8 +47,11 @@ perfect, because that's just how the development world is and I like it when peo
   support updated evergreen browsers for this project.
 
 ## Running Locally
+
 ### Install Dependencies
+
 Run the following before any commands listed below:
+
 ```
 npm i
 ```
@@ -62,6 +65,7 @@ npm run build
 ```
 
 ### Docs
+
 To spin up the Storybook docs for the Design System, run the following command:
 
 ```
@@ -150,7 +154,7 @@ Where this becomes powerful, though, is the ability to apply properties responsi
 simple example:
 
 ```tsx
-<Inline alignX={{'@initial': 'center', '@bp2': 'left'}}>
+<Inline alignX={{ "@initial": "center", "@bp2": "left" }}>
   <Text>Some text</Text>
   <Text>Some more text</Text>
 </Inline>
@@ -168,18 +172,29 @@ be centered on smaller devices and left aligned on larger.
 - `Box`: The foundation of most components. It
 - `Text`: The majority of text/copy on a page.
 - `Heading`: A component for `hx` tags, that uses `clamp` for responsive resizing.
+  - The size of the heading is determined by the `size` prop, which uses element tags as the values to adhere to a consistent style across heading types.
+  - When passing a size, say `size="h2"`, the element will automatically be set as the appropriate `hx` tag, so `<h2>` in this example. This can be overridden by passing the `as` prop with a different heading tag.
+  - Using `clamp` for all sizes, the heading will have a minimum size it will ever be, a maximum size, and it will scale between those sizes based on the viewport width. This is a nice way to handle some other responsive sizing methods that awkwardly shrink too much on smaller devices.
 - `Button`:
 - `Icons`: Each icon is a named component, that uses the `vibe` interface, as well as a `backgroundVibe` for more
   flexibility.
-    - Icons also have built in support within certain components, such as `Button` placing it on the left or right and
-      making it match the `vibe` of the button.
-    - I wanted `Icons` to be its own export that used method calling (e.g. `Icons.Rocket`), but ran into tree-shaking
-      issues with my first attempts.
-    - I have only added a few icons as examples, but they are all from [Heroicons](https://heroicons.com/). I simply
-      have overrides for this Design System.
+  - Icons also have built in support within certain components, such as `Button` placing it on the left or right and
+    making it match the `vibe` of the button.
+  - I wanted `Icons` to be its own export that used method calling (e.g. `Icons.Rocket`), but ran into tree-shaking
+    issues with my first attempts.
+  - I have only added a few icons as examples, but they are all from [Heroicons](https://heroicons.com/). I simply
+    have overrides for this Design System.
 - `Inline`: The first "layout control" component. Used for laying out other components and elements in a row, and
   controlling alignment and spacing across the elements.
-    - `Inline` is a common component for using "Responsive Properties" as described above.
+  - `Inline` is a common component for using "Responsive Properties" as described above.
 - `Divider`: Ok, this one is pretty cool. You wouldn't think a `Divider` component could be so challenging to get right, but hoo doggy it can be.
   - I put a lot of research time into getting the semantic correct on this one, combined with ease of use and just doing what you want automatically.
   - The `Divider` can be used standalone, but it is commonly used as a prop for layout components like `Stack` and `Columns` (coming soon). When the layout orientation is changed, the dividers will swap orientation as well, and filled up the height or width correctly. This is actually very difficult to get correct.
+- `Stack`: A heavy lifter that is the most used layout component, and it deals with spacing between elements. The intended use is to wrap whatever components/elements you want to have space between (including dividers) and set the space property, which will apply the same spacing between all children.
+  - The Stack also handles alignment of children through the align property, as well as automatically making its children wrapped in `li` tags if the as property is set to `ol` or `ul`.
+- `Card`: This is a visual component to be used as a container with common spacing, a neutral background, and a shadow. A typical layout of the web.
+- `Columns`: This is another crucial layout component, typically used often but not as much as `Stack`. It is very handy but can be confused as a `Grid` from other libraries.
+  - The `Columns` (paired with `Column`) is used for common columnar layouts, such as a 1/3rd 2/3rd split that changes to stacked on smaller devices.
+  - It is _not_ meant for wrapping columned layouts, like css Grid is. I don't particularly find `Grid` components useful because if I need that much flexibility I prefer to just write a one-of grid style for that specific layout.
+  - `Column` (singular) is a helper component that lets you set the size, if you wish, of a particular column. e.g. `<Column width="1/5">`
+  - `Columns` uses `flex` under the hood, as I tried using `grid` in various ways, but it didn't fit my use case of needing to set the size of children as easily, like `Column` can.
