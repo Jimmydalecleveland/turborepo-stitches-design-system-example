@@ -7,6 +7,7 @@ export * from "./Divider";
 export * from "./Heading";
 export * from "./Icon";
 export * from "./Inline";
+export * from "./List";
 export * from "./Stack";
 export * from "./Tag";
 export * from "./Text";
