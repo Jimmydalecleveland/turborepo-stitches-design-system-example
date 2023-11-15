@@ -9,6 +9,7 @@ export * from "./Heading";
 export * from "./Icon";
 export * from "./Inline";
 export * from "./List";
+export * from "./Link";
 export * from "./Stack";
 export * from "./Tag";
 export * from "./Text";

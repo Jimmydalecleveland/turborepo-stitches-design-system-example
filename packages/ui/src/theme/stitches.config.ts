@@ -101,6 +101,12 @@ export const {
       actionLinkFocusedText: colors.primary[7],
       actionLinkDisabled: "transparent",
       actionLinkDisabledText: colors.primary[2],
+
+      // Link
+      link: colors.primary[5],
+      linkNeutralInverse: "white",
+      linkVisited: colors.primary[5],
+      linkVisitedNeutralInverse: "white",
     },
     space: {
       gutter: "16px",

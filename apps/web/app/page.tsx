@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   BlockQuote,
   Box,
   Button,
@@ -8,12 +9,14 @@ import {
   Columns,
   Heading,
   Inline,
+  Link,
   List,
   Rocket,
   Stack,
   Tag,
   Text,
 } from "@jimmydalecleveland/stitches-ui-example";
+import { UINextLink } from "../components/Link";
 
 export default function Page(): React.ReactElement {
   return (
@@ -40,6 +43,7 @@ export default function Page(): React.ReactElement {
               <Button RightIcon={Rocket} vibe="attract">
                 Sign up!
               </Button>
+              <UINextLink href="/">SPA Link</UINextLink>
             </Inline>
           </Card>
 
@@ -89,6 +93,19 @@ export default function Page(): React.ReactElement {
             nothing better to do, dreaming up ways to make easy things
             difficult.
           </BlockQuote>
+          <Stack space="01">
+            <Text weight="bold">
+              Common example of a `Link` inlined with a `Button`
+            </Text>
+            <Inline alignX="between">
+              <Button LeftIcon={Rocket} size="small" variant="hollow">
+                Need Help?
+              </Button>
+              <Link RightIcon={ArrowRight} href="/" target="_blank">
+                See full details
+              </Link>
+            </Inline>
+          </Stack>
         </Stack>
       </Box>
     </main>

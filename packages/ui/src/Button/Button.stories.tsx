@@ -92,7 +92,7 @@ export const Vibes = {
 export const WithIcons = {
   render: () => (
     <Stack space="03">
-      <Button LeftIcon={ThumbsUp}>Helpful</Button>
+      <Button LeftIcon={ThumbsUp}>Like</Button>
       <Button RightIcon={Rocket} vibe="attract">
         Vroooom!
       </Button>
