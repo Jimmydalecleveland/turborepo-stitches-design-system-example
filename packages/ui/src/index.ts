@@ -1,5 +1,4 @@
 // component exports
-export { default as Card } from "./card";
 export * from "./Box";
 export * from "./Button";
 export * from "./Text";
@@ -7,6 +6,8 @@ export * from "./Heading";
 export * from "./Icon";
 export * from "./Inline";
 export * from "./Divider";
+export * from "./Stack";
+export * from "./Card";
 
 // theme exports -
 // for customizing and creating your own components

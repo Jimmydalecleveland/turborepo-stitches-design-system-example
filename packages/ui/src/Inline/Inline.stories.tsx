@@ -52,7 +52,6 @@ export const BreakpointAlignment: StoryObj<typeof Inline> = {
   ...MinimalExample,
   args: {
     ...MinimalExample.args,
-    alignX: { '@initial': 'center', '@bp2': 'left' }
-  }
-}
-
+    alignX: { "@initial": "center", "@bp2": "left" },
+  },
+};

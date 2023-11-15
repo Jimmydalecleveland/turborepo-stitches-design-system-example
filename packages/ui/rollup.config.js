@@ -16,6 +16,7 @@ const config = defineConfig({
     'react',
     'react/jsx-runtime',
     'react/jsx-dev-runtime',
+    'react-is',
     '@stitches/react',
   ],
   plugins: [del({ targets: 'dist/*' }), typescript()],

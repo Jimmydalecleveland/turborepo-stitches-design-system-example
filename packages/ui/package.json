@@ -28,6 +28,7 @@
     "@storybook/addon-links": "^7.5.2",
     "@storybook/addon-onboarding": "^1.0.8",
     "@storybook/blocks": "^7.5.2",
+    "@storybook/jest": "^0.2.3",
     "@storybook/react": "^7.5.2",
     "@storybook/react-vite": "^7.5.2",
     "@storybook/testing-library": "^0.2.2",
@@ -54,6 +55,8 @@
   "dependencies": {
     "@fontsource/karla": "^5.0.17",
     "@fontsource/texturina": "^5.0.17",
-    "@stitches/react": "^1.2.8"
+    "@stitches/react": "^1.2.8",
+    "react-is": "^18.2.0",
+    "@types/react-is": "^18.2.4"
   }
 }
