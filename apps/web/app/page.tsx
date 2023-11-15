@@ -7,6 +7,7 @@ import {
   Columns,
   Heading,
   Inline,
+  List,
   Rocket,
   Stack,
   Tag,
@@ -52,20 +53,34 @@ export default function Page(): React.ReactElement {
 
           <Columns space="04">
             <Column>
-              <Heading as="h3">Heading 3</Heading>
-              <Text as="p">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Accusamus ad asperiores culpa dolore eaque laudantium maxime
-                molestias nobis rem, vero.
-              </Text>
+              <Stack space="03">
+                <Heading as="h3">Heading 3</Heading>
+                <Text as="p">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Accusamus ad asperiores culpa dolore eaque laudantium maxime
+                  molestias nobis rem, vero.
+                </Text>
+                <List>
+                  <Text>List item 1</Text>
+                  <Text>List item 2</Text>
+                  <Text>List item 3</Text>
+                </List>
+              </Stack>
             </Column>
             <Column>
-              <Heading as="h3">Heading 3</Heading>
-              <Text as="p">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Accusamus ad asperiores culpa dolore eaque laudantium maxime
-                molestias nobis rem, vero.
-              </Text>
+              <Stack space="03">
+                <Heading as="h3">Heading 3</Heading>
+                <Text as="p">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Accusamus ad asperiores culpa dolore eaque laudantium maxime
+                  molestias nobis rem, vero.
+                </Text>
+                <List Icon={<Check vibe="positive" />} gap="03">
+                  <Text>Do the thing.</Text>
+                  <Text>Do that other thing.</Text>
+                  <Text>A third item cuz it is weird with only two.</Text>
+                </List>
+              </Stack>
             </Column>
           </Columns>
         </Stack>

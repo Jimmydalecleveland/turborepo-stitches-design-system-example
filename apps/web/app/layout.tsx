@@ -12,7 +12,6 @@ export const metadata: Metadata = {
     "A design system built with Stitches, Turborepo, Rollup, and Next.js",
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unsafe-call -- this is an intended side effect of applying global styles
 globalStyles();
 
 export default function RootLayout({
