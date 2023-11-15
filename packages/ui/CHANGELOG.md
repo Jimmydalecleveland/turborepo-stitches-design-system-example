@@ -1,5 +1,12 @@
 # @jimmydalecleveland/stitches-ui-example
 
+## 0.12.0
+
+### Minor Changes
+
+- 9d534a3: The `Link` and `SpaLink` components have been added, as well as an example of composing `next/link` with `SpaLink` in the web app directory. `Link` is your standard anchor with the design system styles through Vibes. `SpaLink` is intended for usage with single page app frameworks that use a special routing mechanism that doesn't support simple composing with an anchor, such as Next.js v12. You can use whichever is easier in your environment.
+- 7d67ef3: The `BlockQuote` component has been added for a simple way to get a stylized blockquote.
+
 ## 0.11.0
 
 ### Minor Changes
