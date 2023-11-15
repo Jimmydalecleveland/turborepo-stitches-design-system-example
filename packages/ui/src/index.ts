@@ -1,7 +1,8 @@
 // component exports
-export * from "./Box";
-export * from "./Button";
 export * from "./BlockQuote";
+export * from "./Box";
+export * from "./Breadcrumbs";
+export * from "./Button";
 export * from "./Card";
 export * from "./Columns";
 export * from "./Divider";
