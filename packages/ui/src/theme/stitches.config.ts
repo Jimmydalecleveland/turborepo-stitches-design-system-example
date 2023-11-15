@@ -244,6 +244,7 @@ export const globalStyles = globalCss({
     margin: 0,
     backgroundColor: "$boxSubdued",
     height: "100%",
+    fontFamily: "$body",
   },
 
   // required to push footer to bottom in inner layout from Next.js
