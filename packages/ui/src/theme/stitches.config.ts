@@ -26,8 +26,6 @@ export const {
       boxAttract: colors.primary[0],
       boxDisabled: colors.gray[1],
 
-      actionNeutral: "slateblue",
-
       // Text
       textNeutral: colors.text[7],
       textNeutralInverse: "white",
@@ -73,6 +71,36 @@ export const {
       // Divider
       dividerDefault: colors.gray[1],
       dividerHeavy: colors.gray[2],
+
+      // Action (button)
+      actionAttractText: 'white',
+      actionAttractDefault: colors.secondary[5],
+      actionAttractHovered: colors.secondary[7],
+      actionAttractFocused: colors.secondary[6],
+      actionAttractDisabled: colors.secondary[0],
+      actionAttractDisabledText: colors.secondary[2],
+      actionNeutralText: 'white',
+      actionNeutralDefault: colors.primary[5],
+      actionNeutralHovered: colors.primary[7],
+      actionNeutralFocused: colors.primary[6],
+      actionNeutralDisabled: colors.primary[0],
+      actionNeutralDisabledText: colors.primary[2],
+      actionHollowText: colors.primary[6],
+      actionHollowDefault: 'transparent',
+      actionHollowHovered: colors.primary[0],
+      actionHollowHoveredText: colors.primary[7],
+      actionHollowFocused: 'transparent',
+      actionHollowFocusedText: colors.primary[6],
+      actionHollowDisabled: 'transparent',
+      actionHollowDisabledText: colors.primary[1],
+      actionLinkText: colors.primary[4],
+      actionLinkDefault: 'transparent',
+      actionLinkHovered: colors.primary[0],
+      actionLinkHoveredText: colors.primary[4],
+      actionLinkFocused: colors.primary[0],
+      actionLinkFocusedText: colors.primary[7],
+      actionLinkDisabled: 'transparent',
+      actionLinkDisabledText: colors.primary[2],
     },
     space: {
       gutter: "16px",

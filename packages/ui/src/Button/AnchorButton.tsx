@@ -1,23 +1,22 @@
 import * as React from "react";
 import { Inline } from "../Inline";
-import { type BaseButtonProps, buttonToIconSizeMap } from "./types";
 import * as Styled from "./Button.styles";
+import type { BaseButtonProps } from "./types";
+import { buttonToIconSizeMap } from "./types";
 
-export interface ButtonProps
+export interface AnchorButtonProps
   extends BaseButtonProps,
-    React.ButtonHTMLAttributes<HTMLButtonElement> {
-  type?: "button" | "submit";
-}
+    React.AnchorHTMLAttributes<HTMLAnchorElement> {}
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  function ButtonWithRef(
+const AnchorButton = React.forwardRef<HTMLAnchorElement, AnchorButtonProps>(
+  function AnchorButtonWithRef(
     {
       css,
       children,
-      type = "button",
       tabIndex = 0,
       vibe = "neutral",
       variant = "solid",
+      href,
       size = "medium",
       corners = "round",
       shadow,
@@ -33,11 +32,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <Styled.Button
         ref={ref}
         {...otherProps}
-        // I have read the full discussion on this lint rule here:
-        // https://github.com/jsx-eslint/eslint-plugin-react/issues/1555
-        // I don't fully understand the issue this rule is trying to solve,
-        // but I believe the way we are handling it within TS is sufficient.
-        type={type}
+        as="a"
+        href={href}
         css={css}
         tabIndex={tabIndex}
         vibe={vibe}
@@ -62,4 +58,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   },
 );
 
-export default Button;
+export default AnchorButton;
