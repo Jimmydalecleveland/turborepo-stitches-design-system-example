@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/karla": "^5.0.17",
+    "@fontsource/texturina": "^5.0.17",
     "@jimmydalecleveland/stitches-ui-example": "*",
     "next": "^13.4.19",
     "react": "^18.2.0",

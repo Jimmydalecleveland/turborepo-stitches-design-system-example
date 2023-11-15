@@ -1,4 +1,5 @@
 import {
+  BlockQuote,
   Box,
   Button,
   Card,
@@ -83,6 +84,11 @@ export default function Page(): React.ReactElement {
               </Stack>
             </Column>
           </Columns>
+          <BlockQuote>
+            But that was civilisation, so far as Logen could tell. People with
+            nothing better to do, dreaming up ways to make easy things
+            difficult.
+          </BlockQuote>
         </Stack>
       </Box>
     </main>
