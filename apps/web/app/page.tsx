@@ -2,12 +2,14 @@ import {
   ArrowRight,
   BlockQuote,
   Box,
+  Breadcrumbs,
   Button,
   Card,
   Check,
   Column,
   Columns,
   Heading,
+  Home,
   Inline,
   Link,
   List,
@@ -23,6 +25,20 @@ export default function Page(): React.ReactElement {
     <main>
       <Box padding="04">
         <Stack space="06">
+          <Breadcrumbs>
+            <Link href="/">
+              <Home size="xs" vibe="attract" />
+            </Link>
+            <Link href="/#example" key={0} size="xs">
+              Products
+            </Link>
+            <Link href="/#example" key={1} size="xs">
+              Category
+            </Link>
+            <Text key={2} size="xs" weight="medium">
+              Page Name
+            </Text>
+          </Breadcrumbs>
           <Box vibe="neutral">
             <Heading size="h1">Welcome to the Stitches Design System</Heading>
             <Text as="p">
