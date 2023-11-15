@@ -37,7 +37,8 @@ const Card = ({
 
   return (
     <Box vibe="neutral" corners={derivedCorners} shadow={shadow} css={css}>
-      {headerContent ? <Box
+      {headerContent ? (
+        <Box
           as="header"
           vibe={prominent ? "neutralInverse" : "disabled"}
           paddingY="04"
@@ -45,7 +46,8 @@ const Card = ({
           cornersTop={derivedCorners}
         >
           {headerContent}
-        </Box> : null}
+        </Box>
+      ) : null}
       <Box padding={paddingMap[spaceSize]} cornersBottom={derivedCorners}>
         {children}
       </Box>
