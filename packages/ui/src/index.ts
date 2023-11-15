@@ -8,6 +8,7 @@ export * from "./Heading";
 export * from "./Icon";
 export * from "./Inline";
 export * from "./Stack";
+export * from "./Tag";
 export * from "./Text";
 
 // theme exports -
