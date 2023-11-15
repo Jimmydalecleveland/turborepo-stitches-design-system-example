@@ -175,7 +175,8 @@ be centered on smaller devices and left aligned on larger.
   - The size of the heading is determined by the `size` prop, which uses element tags as the values to adhere to a consistent style across heading types.
   - When passing a size, say `size="h2"`, the element will automatically be set as the appropriate `hx` tag, so `<h2>` in this example. This can be overridden by passing the `as` prop with a different heading tag.
   - Using `clamp` for all sizes, the heading will have a minimum size it will ever be, a maximum size, and it will scale between those sizes based on the viewport width. This is a nice way to handle some other responsive sizing methods that awkwardly shrink too much on smaller devices.
-- `Button`:
+- `Button`: Uses the `vibe` system, as well as having a `hollow` variant for each vibe. Also supports left or right icons as props so it can balance and size them appropriately.
+  - When using an Icon from the Design System with button, it is expected to pass the icon variable, not the instantiation of it. e.g. `<Button RightIcon={Rocket} vibe="attract">`. This is because Button handles calling the Icon and setting its colors to match the button vibe.
 - `Icons`: Each icon is a named component, that uses the `vibe` interface, as well as a `backgroundVibe` for more
   flexibility.
   - Icons also have built in support within certain components, such as `Button` placing it on the left or right and
