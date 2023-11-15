@@ -1,6 +1,16 @@
 // noinspection HtmlRequiredTitleElement
 
 import type { Metadata } from "next";
+import "@fontsource/karla/300.css";
+import "@fontsource/karla/400.css";
+import "@fontsource/karla/500.css";
+import "@fontsource/karla/600.css";
+import "@fontsource/karla/700.css";
+import "@fontsource/texturina/300.css";
+import "@fontsource/texturina/400.css";
+import "@fontsource/texturina/500.css";
+import "@fontsource/texturina/600.css";
+import "@fontsource/texturina/700.css";
 import {
   getCssText,
   globalStyles,
