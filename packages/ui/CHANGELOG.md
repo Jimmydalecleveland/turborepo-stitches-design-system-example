@@ -1,5 +1,12 @@
 # @jimmydalecleveland/stitches-ui-example
 
+## 0.7.0
+
+### Minor Changes
+
+- d46a76d: The `Divider` component has been added, which can be used as a standalone or through layout components that are coming soon. It has some really cool functionality built in to allow it to change orientation automatically in flex/grid containers that switch orientation, filling up the space between elements correctly. This was so much harder to do reliably than I thought when I first attempted this.
+- f29e583: The `Stack` and `Card` components have been added. `Stack` is a heavy lifter that is the most used layout component, and it deals with spacing between elements. The intended use is to wrap whatever components/elements you want to have space between (including dividers) and set the `space` property, which will apply the same spacing between all children. The `Stack` also handles alignment of children through the `align` property, as well as automatically making its children wrapped in `li` tags if the `as` property is set to `ol` or `ul`. `Card` is a visual component to be used as a container with common spacing, a `neutral` background, and a shadow. A typical layout of the web.
+
 ## 0.6.0
 
 ### Minor Changes
