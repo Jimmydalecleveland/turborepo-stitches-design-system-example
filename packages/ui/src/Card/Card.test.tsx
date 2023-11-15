@@ -14,6 +14,6 @@ test("Card renders", () => {
 test("Card renders with header content", () => {
   render(<WithHeaderContent />);
 
-  screen.getByText(/editor's choice/i);
+  screen.getByText(/featured item/i);
   screen.getByText(/I am a Card/i);
 });
