@@ -69,6 +69,10 @@ export const {
       iconBackgroundDisabled: colors.gray[1],
       iconBackgroundAttract: colors.primary[0],
       iconBackgroundSubdued: colors.tertiary[1],
+
+      // Divider
+      dividerDefault: colors.gray[1],
+      dividerHeavy: colors.gray[2],
     },
     space: {
       gutter: "16px",
@@ -126,6 +130,12 @@ export const {
       medium: "0 4px 8px -2px rgba(0, 31, 41, 0.1)",
       high: "0 12px 16px -4px rgba(0, 31, 41, 0.1)",
       highest: "0 20px 24px -4px rgba(0, 31, 41, 0.1)",
+    },
+    borderWidths: {
+      sm: '1px',
+      md: '2px',
+      lg: '4px',
+      xl: '6px',
     },
   },
   media: {
