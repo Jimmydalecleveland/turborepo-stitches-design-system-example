@@ -1,5 +1,18 @@
 # web
 
+## 1.11.0
+
+### Minor Changes
+
+- 9bc256d: `Breadcrumbs` has been added, allowing for a simpler way to create an interactive breadcrumb trail of where the user is at in an app.
+
+### Patch Changes
+
+- 6d280c3: A bug was fixed where the themes `$body` font family was not being set by default. It was working correctly in Storybook but not in the demo Next.js app.
+- Updated dependencies [6d280c3]
+- Updated dependencies [9bc256d]
+  - @jimmydalecleveland/stitches-ui-example@0.13.0
+
 ## 1.10.0
 
 ### Minor Changes
