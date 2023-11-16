@@ -70,7 +70,7 @@ export const tertiary: FullColorArray = [
 ];
 
 /*
- * This is color is used for star ratings and laurel icons.
+ * This is color is used for star ratings.
  */
 export const extended: FullColorArray = [
   "hsla(45, 100%, 95%, 1)", // Light Yellow

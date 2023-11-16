@@ -12,6 +12,7 @@ export * from "./Inline";
 export * from "./List";
 export * from "./Link";
 export * from "./Stack";
+export * from "./StarRating";
 export * from "./Tag";
 export * from "./Text";
 
