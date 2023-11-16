@@ -59,7 +59,9 @@ export default function Page(): React.ReactElement {
               <Button RightIcon={Rocket} vibe="attract">
                 Sign up!
               </Button>
-              <UINextLink href="/">SPA Link</UINextLink>
+              <UINextLink href="/custom-theme-example">
+                Custom theme example
+              </UINextLink>
             </Inline>
           </Card>
 
