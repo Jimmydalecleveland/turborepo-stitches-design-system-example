@@ -7,6 +7,10 @@ import { Tag } from ".";
 export default {
   title: "Components/Tag",
   component: Tag,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
 } satisfies Meta<typeof Tag>;
 
 export const Default = {

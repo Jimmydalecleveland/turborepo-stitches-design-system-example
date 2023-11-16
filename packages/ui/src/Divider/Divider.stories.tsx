@@ -6,6 +6,10 @@ import { Divider } from ".";
 const meta = {
   title: "Components/Divider",
   component: Divider,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     thickness: {
       options: ["light", "heavy"],

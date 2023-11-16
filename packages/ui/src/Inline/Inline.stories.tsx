@@ -5,7 +5,11 @@ import { Inline } from ".";
 export default {
   title: "Components/Inline",
   component: Inline,
-} as Meta<typeof Inline>;
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
+} satisfies Meta<typeof Inline>;
 
 export const MinimalExample = {
   args: {
@@ -53,5 +57,8 @@ export const BreakpointAlignment: StoryObj<typeof Inline> = {
   args: {
     ...MinimalExample.args,
     alignX: { "@initial": "center", "@bp2": "left" },
+  },
+  parameters: {
+    layout: "padded",
   },
 };

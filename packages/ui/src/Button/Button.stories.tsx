@@ -12,6 +12,10 @@ const meta = {
   title: "Components/Button",
   component: Button,
   argTypes: { onClick: { action: true } },
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;

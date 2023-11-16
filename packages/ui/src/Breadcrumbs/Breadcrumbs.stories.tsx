@@ -7,6 +7,7 @@ import { Breadcrumbs } from "./index";
 export default {
   title: "Components/Breadcrumbs",
   component: Breadcrumbs,
+  tags: ["autodocs"],
 } as Meta<typeof Breadcrumbs>;
 
 export const Default = {

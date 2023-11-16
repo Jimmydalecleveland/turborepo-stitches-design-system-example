@@ -8,6 +8,34 @@ import type {
 import flattenFragments from "../utils/flattenFragments";
 import * as Styled from "./Columns.styles";
 
+type ColumnedAbove = ThemeBreakPoints | "never";
+
+export interface ColumnsProps {
+  as?: React.ElementType;
+  css?: CSS;
+  children: React.ReactNode;
+  space?: ThemeSpace;
+  collapsedSpace?: ThemeSpace;
+  alignY?: "top" | "center" | "bottom";
+  alignX?: "left" | "center" | "right";
+  equalHeight?: boolean;
+  reversed?: boolean;
+  columnedAbove?: ColumnedAbove;
+  dividers?: "light" | "heavy";
+}
+
+export function createEnabledBpObject(bp: ColumnedAbove) {
+  const enabledAtBp: Styled.ColumnsStyleProps["enabled"] = {
+    "@initial": false,
+  };
+
+  if (bp !== "never") {
+    enabledAtBp[`@${bp}`] = true;
+  }
+
+  return enabledAtBp;
+}
+
 /**
  * This component uses `React.children.map` in order to support `dividers` being
  * dynamically added between each child element. The question of "why" comes up
@@ -39,35 +67,6 @@ import * as Styled from "./Columns.styles";
  * Some future flexibility examples are that we can add the ability to pass a custom
  * divider at some point, or use `border-image: linear-gradient` for gradient dividers.
  */
-
-type ColumnedAbove = ThemeBreakPoints | "never";
-
-export interface ColumnsProps {
-  as?: React.ElementType;
-  css?: CSS;
-  children: React.ReactNode;
-  space?: ThemeSpace;
-  collapsedSpace?: ThemeSpace;
-  alignY?: "top" | "center" | "bottom";
-  alignX?: "left" | "center" | "right";
-  equalHeight?: boolean;
-  reversed?: boolean;
-  columnedAbove?: ColumnedAbove;
-  dividers?: "light" | "heavy";
-}
-
-export function createEnabledBpObject(bp: ColumnedAbove) {
-  const enabledAtBp: Styled.ColumnsStyleProps["enabled"] = {
-    "@initial": false,
-  };
-
-  if (bp !== "never") {
-    enabledAtBp[`@${bp}`] = true;
-  }
-
-  return enabledAtBp;
-}
-
 const Columns = ({
   children,
   as,

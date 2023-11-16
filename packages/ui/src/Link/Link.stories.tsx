@@ -11,7 +11,11 @@ import { Link, SpaLink } from "./index";
 export default {
   title: "Components/Link",
   component: Link,
-} as Meta<typeof Link>;
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
+} satisfies Meta<typeof Link>;
 
 export const Minimal = {
   args: {

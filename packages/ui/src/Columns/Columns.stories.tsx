@@ -11,6 +11,7 @@ import { Column, Columns } from ".";
 const meta = {
   title: "Components/Columns",
   component: Columns,
+  tags: ["autodocs"],
   args: {
     space: "03",
   },
