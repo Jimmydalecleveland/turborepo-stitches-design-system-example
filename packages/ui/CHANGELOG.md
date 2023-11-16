@@ -1,5 +1,15 @@
 # @jimmydalecleveland/stitches-ui-example
 
+## 1.0.0
+
+### Major Changes
+
+- 22d89cd: I rarely feel ready to release v1, as there is always work to do and who knows what breaking changes are around the corner, but with the revamped theme in this update replacing the placeholder one that existed before, I think it is ready to be considered v1. There isn't actually a breaking change in this update, but the system is useable and stable enough at this point to move forward with the first major release. This theme needs a bit more tweaking, and it is just the default theme (you can customize the theme for this Design System at any level), but it does have enough time put into it to be a good starting point.
+
+### Minor Changes
+
+- 68504d7: `StarRating` component, and its helper components and utility functions, have been added. This includes utility functions for calculating a percentage to a custom star rating (defaulting to 5), which avoids rounding up for fairness reasons. It also includes a `Star` SVG that can have the colored layer path move (i.e. slide) across the gray star background to allow for states inbetween full and half stars. It also includes a `StarRatingGroup` which is used to display the rating text in standard ways without having to setup those layouts and sizing.
+
 ## 0.13.0
 
 ### Minor Changes
