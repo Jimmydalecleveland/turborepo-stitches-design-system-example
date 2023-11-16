@@ -107,6 +107,11 @@ export const {
       linkNeutralInverse: "white",
       linkVisited: colors.primary[5],
       linkVisitedNeutralInverse: "white",
+
+      // Ordinal (StarRating, other ranking type components)
+      ordinalFirst: colors.extended[5],
+      ordinalSecond: colors.tertiary[6],
+      ordinalThird: colors.gray[3], // The background of stars in StarRating
     },
     space: {
       gutter: "16px",
