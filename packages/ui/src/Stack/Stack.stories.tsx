@@ -6,6 +6,7 @@ import { Stack } from ".";
 const meta = {
   title: "Components/Stack",
   component: Stack,
+  tags: ["autodocs"],
   argTypes: {
     dividers: {
       control: "radio",

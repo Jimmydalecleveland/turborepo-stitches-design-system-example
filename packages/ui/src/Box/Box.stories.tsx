@@ -4,6 +4,10 @@ import { Box } from ".";
 export default {
   title: "Components/Box",
   component: Box,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
 } as Meta<typeof Box>;
 
 export const Default = {

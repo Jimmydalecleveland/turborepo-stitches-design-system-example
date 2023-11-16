@@ -8,6 +8,10 @@ import { List } from ".";
 const meta = {
   title: "Components/List",
   component: List,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
 } satisfies Meta<typeof List>;
 
 export default meta;

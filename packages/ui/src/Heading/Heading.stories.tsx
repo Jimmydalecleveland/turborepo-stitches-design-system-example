@@ -4,6 +4,10 @@ import Heading from "./Heading";
 const meta = {
   title: "Components/Heading",
   component: Heading,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
 } satisfies Meta<typeof Heading>;
 
 export default meta;

@@ -5,6 +5,10 @@ import * as Icons from ".";
 
 export default {
   title: "Components/Icons",
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   // TODO: figure out how to get Storybook to automatically infer
   // these options from our Types
   argTypes: {
@@ -41,7 +45,7 @@ export default {
       ],
     },
   },
-} as Meta<typeof Svg>;
+} satisfies Meta<typeof Svg>;
 
 const iconGrid = css({
   display: "flex",

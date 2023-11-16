@@ -7,6 +7,10 @@ import { Card } from ".";
 export default {
   title: "Components/Card",
   component: Card,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     corners: {
       control: "radio",

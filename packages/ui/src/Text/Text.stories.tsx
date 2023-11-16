@@ -4,6 +4,10 @@ import Text from "./Text";
 export default {
   title: "Components/Text",
   component: Text,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
 } satisfies Meta<typeof Text>;
 
 export const Default = {

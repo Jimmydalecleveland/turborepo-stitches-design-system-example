@@ -4,6 +4,9 @@ import { BlockQuote } from ".";
 export default {
   title: "Components/BlockQuote",
   component: BlockQuote,
+  parameters: {
+    layout: "centered",
+  },
 } satisfies Meta<typeof BlockQuote>;
 
 export const Default = {

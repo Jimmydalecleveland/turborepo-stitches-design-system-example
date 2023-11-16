@@ -11,8 +11,8 @@ export interface BreadcrumbsProps {
 }
 
 /**
- * Styles should come from each individual child component in order to make it possible to render a next/link, a Link component, Text, etc.
- * The size prop applies to the arrow icon only.
+ * Styles should come from each individual child component in order to make it possible to render a
+ * `next/link`, a `Link` component, `Text`, etc. The size prop applies to the arrow icon only.
  */
 const Breadcrumbs = ({
   children,

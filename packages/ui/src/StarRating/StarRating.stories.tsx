@@ -4,6 +4,10 @@ import { StarRating } from ".";
 export default {
   title: "Components/StarRating",
   component: StarRating,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
   argTypes: {
     percent: {
       control: "range",
