@@ -81,7 +81,7 @@ export const {
       actionAttractDisabledText: colors.secondary[2],
       actionNeutralText: "white",
       actionNeutralDefault: colors.primary[5],
-      actionNeutralHovered: colors.primary[7],
+      actionNeutralHovered: colors.primary[8],
       actionNeutralFocused: colors.primary[6],
       actionNeutralDisabled: colors.primary[0],
       actionNeutralDisabledText: colors.primary[2],
@@ -103,7 +103,7 @@ export const {
       actionLinkDisabledText: colors.primary[2],
 
       // Link
-      link: colors.primary[5],
+      link: colors.primary[6],
       linkNeutralInverse: "white",
       linkVisited: colors.primary[5],
       linkVisitedNeutralInverse: "white",
